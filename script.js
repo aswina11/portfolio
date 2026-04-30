@@ -91,10 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Simple Form submission handler (prevent default)
+    // Web3Forms submission handler
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = contactForm.querySelector('button');
             const originalText = btn.innerText;
@@ -102,18 +102,42 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.innerText = 'Sending...';
             btn.style.opacity = '0.8';
             
-            // Simulate sending
-            setTimeout(() => {
-                btn.innerText = 'Message Sent!';
-                btn.style.background = '#10b981'; // Green color
-                contactForm.reset();
+            // Create FormData from the form
+            const formData = new FormData(contactForm);
+            
+            // IMPORTANT: Replace the value below with your actual Web3Forms Access Key
+            // Get your free key at: https://web3forms.com/
+            formData.append("access_key", "dfeea87b-c182-4465-bc2e-82fc2329012c");
+            
+            try {
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData
+                });
                 
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.style.background = ''; // Revert to default
-                    btn.style.opacity = '1';
-                }, 3000);
-            }, 1500);
+                const data = await response.json();
+                
+                if (data.success) {
+                    btn.innerText = 'Message Sent!';
+                    btn.style.background = '#10b981'; // Green color
+                    contactForm.reset();
+                } else {
+                    console.error("Web3Forms Error:", data);
+                    btn.innerText = 'Error! Try Again';
+                    btn.style.background = '#ef4444'; // Red color
+                }
+            } catch (error) {
+                console.error("Submission Error:", error);
+                btn.innerText = 'Error! Try Again';
+                btn.style.background = '#ef4444'; // Red color
+            }
+            
+            // Revert button back to normal after 3 seconds
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.background = ''; // Revert to default
+                btn.style.opacity = '1';
+            }, 3000);
         });
     }
 });
