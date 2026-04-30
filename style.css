@@ -220,11 +220,11 @@ h1, h2, h3, h4, h5, h6, .logo {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10%;
+    padding: calc(var(--nav-height) + 2rem) 10% 2rem;
     position: relative;
     overflow: hidden;
 }
@@ -678,8 +678,10 @@ footer {
     .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
     
-    .name { font-size: 3rem; }
-    .title { font-size: 1.5rem; }
+    .name { font-size: 2.8rem; line-height: 1.2; margin-top: 0.5rem; margin-bottom: 1rem; }
+    .title { font-size: 1.4rem; line-height: 1.4; margin-bottom: 1.5rem; }
+    .greeting { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .summary { font-size: 1rem; }
     .section-title { font-size: 2rem; }
     
     .timeline-box {
