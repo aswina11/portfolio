@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aswin A - Portfolio</title>
+    <meta name="description" content="Portfolio of Aswin A, Full-Stack Developer and AI Enthusiast.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Dynamic Background -->
+    <div class="bg-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Aswin A.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content fade-in">
+            <p class="greeting">Hi, I'm</p>
+            <h1 class="name">Aswin A</h1>
+            <h2 class="title">Full-Stack Developer & <span class="highlight">AI Enthusiast</span></h2>
+            <p class="summary">Engineering secure, intelligent applications and innovative IoT solutions.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn">View My Work</a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+            </div>
+            <div class="social-links">
+                <a href="mailto:aswinajayan91@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/aswina11" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/aswin-ajayan-430124344?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/aswinachu05/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="hero-image slide-in-right">
+            <!-- Placeholder for profile image, using a cool geometric shape for now -->
+            <div class="cube-wrapper">
+                <div class="cube">
+                    <div class="face front">Code</div>
+                    <div class="face back">Build</div>
+                    <div class="face right">AI</div>
+                    <div class="face left">IoT</div>
+                    <div class="face top">Data</div>
+                    <div class="face bottom">Logic</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-container">
+            <div class="about-text fade-in-up">
+                <p>I am a passionate Computer Science and Engineering student at Rohini College of Engineering and Technology (2026), driven by a strong desire to solve complex problems through technology.</p>
+                <p>My career objective is to obtain a challenging position in a reputable organization where I can utilize my technical skills in full-stack software development, AI integration, and problem-solving to contribute to organizational growth and enhance my professional career.</p>
+                <div class="education-timeline">
+                    <h3>Education</h3>
+                    <div class="timeline-item">
+                        <h4>B.E. Computer Science and Engineering</h4>
+                        <p>Rohini College of Engineering and Technology | Anna University | 2026</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Higher Secondary (12th Standard)</h4>
+                        <p>Govt H S S, Thazhava | 2022 | 94%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section-padding">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category glass-card slide-in-left">
+                <h3><i class="fas fa-code"></i> Languages</h3>
+                <div class="skill-tags">
+                    <span>Python</span>
+                    <span>HTML</span>
+                    <span>C/C++</span>
+                    <span>Java</span>
+                </div>
+            </div>
+            <div class="skill-category glass-card slide-in-right">
+                <h3><i class="fas fa-tools"></i> Frameworks & Tools</h3>
+                <div class="skill-tags">
+                    <span>Django</span>
+                    <span>React</span>
+                    <span>PostgreSQL</span>
+                    <span>MySQL</span>
+                    <span>Arduino</span>
+                    <span>Git</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section-padding">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="project-grid">
+            
+            <div class="project-card glass-card fade-in-up">
+                <div class="project-content">
+                    <h3>AI Medical Portal</h3>
+                    <p>A secure full-stack healthcare management portal featuring automated radiology scan analysis and a 24/7 AI-driven symptom guidance assistant.</p>
+                    <div class="tech-stack">
+                        <span>Python (Django)</span>
+                        <span>Gemini 1.5 Flash</span>
+                        <span>PostgreSQL</span>
+                        <span>Bootstrap 5</span>
+                    </div>
+                    <ul class="project-features">
+                        <li>Strict Role-Based Access Control (RBAC).</li>
+                        <li>Automated scan analysis integration.</li>
+                    </ul>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="https://my-hospital-portal.onrender.com/" target="_blank" class="btn primary-btn" style="padding: 0.5rem 1.5rem; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px;" onclick="alert('Please note: The live demo is hosted on a free tier and may take up to 60 seconds to wake up. Thank you for your patience!');">
+                            View Live Demo <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.8rem; font-style: italic;">
+                            <i class="fas fa-info-circle"></i> May take ~60s to load (free tier hosting)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card glass-card fade-in-up" style="animation-delay: 0.2s;">
+                <div class="project-content">
+                    <h3>Smart Parking System</h3>
+                    <p>An IoT-based parking management system for real-time slot monitoring with cloud integration and LED status indicators.</p>
+                    <div class="tech-stack">
+                        <span>Arduino</span>
+                        <span>ESP8266</span>
+                        <span>Ultrasonic/IR Sensors</span>
+                        <span>Firebase</span>
+                    </div>
+                    <ul class="project-features">
+                        <li>Real-time slot monitoring.</li>
+                        <li>Cloud integration for data logging.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section-padding">
+        <h2 class="section-title">Experience & Certifications</h2>
+        <div class="experience-container">
+            
+            <div class="timeline-box glass-card fade-in-up">
+                <div class="box-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="box-content">
+                    <h3>Internship: Artificial Intelligence and Robotics</h3>
+                    <p class="company">SRAI SMART SOLUTIONS PVT LTD | June 2025 – July 2025</p>
+                    <p>Worked on robotic arm automation, IoT sensor integration, and machine learning models for object detection.</p>
+                </div>
+            </div>
+
+            <div class="timeline-box glass-card fade-in-up" style="animation-delay: 0.2s;">
+                <div class="box-icon"><i class="fas fa-certificate"></i></div>
+                <div class="box-content">
+                    <h3>Technology Training in JAVA</h3>
+                    <p class="company">Srishti Innovative, Trivandrum</p>
+                    <p>Completed comprehensive technology training focused on core and advanced Java concepts.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container glass-card fade-in">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Feel free to reach out to me for any opportunities or collaborations.</p>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9539959724</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>aswinajayan91@gmail.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Kollam, Kerala - 690574</span>
+                </div>
+            </div>
+            <form class="contact-form">
+                <div class="input-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Aswin A. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
